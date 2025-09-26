@@ -4,5 +4,5 @@ from fieldwork import plant_field
 from fieldwork import farm_field
 
 till_field()
-plant_field("carrot", 0.10)
-farm_field("carrot", 0.10, 1000)
+plant_field("carrot", 0.50)
+farm_field("carrot", 0.50, 1000)

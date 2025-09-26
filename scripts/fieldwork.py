@@ -40,7 +40,7 @@ def grow_pumpkin(crop, quota):
 				if get_entity_type() == None:
 					if num_items(Items.Carrot) < 2:
 						print("Not enough carrots to plant pumpkins")
-						return
+						break
 					plant(Entities.Pumpkin)
 				move(North)
 				if get_entity_type() == Entities.Pumpkin:
@@ -80,6 +80,8 @@ def plant_field(crop = None, level = 0):
 					print("Not enough wood to plant carrots")
 					return
 			plant_crop(crop)
+			if not level == 0:
+				water(level)
 			move(North)
 		move(East)
 
@@ -111,7 +113,8 @@ def farm_field(crop = None, level = 0, quota = 0):
 				if can_harvest():
 					harvest()
 					plant_crop(crop)
-					water(level)
+					if not level == 0:
+						water(level)
 			move(North)
 		move(East)
 	

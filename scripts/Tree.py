@@ -8,7 +8,7 @@ from fieldwork import farm_field
 	
 till_field()
 
-plant_checkerboard("wood", 0.10)
+plant_checkerboard("wood", 0.60)
 	
-farm_field("wood", 0.10, 500)
+farm_field("wood", 0.60, 10000)
 	
